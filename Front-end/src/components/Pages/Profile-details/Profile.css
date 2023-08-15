@@ -1,0 +1,171 @@
+.profile-container {
+    width: auto;
+    padding-top: 1px;
+    padding-bottom: 2rem;
+
+}
+
+.title-profile {
+    display: flex;
+    margin: 4rem 50px;
+    border-bottom: 2px grey solid;
+    
+}
+
+.title-profile span {
+    padding-left: 30px;
+    font-weight: bold;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.title-profile a {
+    text-decoration: none;
+}
+
+
+.active-page-profile a {
+    color: black;
+}
+
+.active-page-profile a:hover {
+    color: whitesmoke;
+    
+}
+
+
+.content-profile-container {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+/* Content one Profile */
+.content-one-profile {
+    width: 300px;
+    background-color: white;
+    border-radius: 20px;
+    text-align: center;
+    padding-bottom: 20px;
+    filter: drop-shadow(0 0 5px grey);
+    font-weight: bold;
+}
+
+
+.title-one-profile {
+    height: 50px;
+    background-color: #AED19C;
+    border-radius: 20px 20px 0 0;
+    display: flex;
+    padding: 10px 20px;
+    font-size: 20px;
+    font-weight: bold;
+
+}
+
+.img-content-profile img {
+    margin-top: 10px;
+    width: 200px;
+}
+
+.btn-img-profile label {
+    display: inline-block;
+    background-color: #3967C2;
+    color: white;
+    padding: 0.5rem;
+    font-family: sans-serif;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    font-family: 'Prompt', sans-serif;
+    font-weight: bold;
+}
+
+.btn-img-profile label:hover {
+    display: inline-block;
+    background-color: black;
+    color: white;
+    transition: 0.2s;
+}
+
+
+table,
+th,
+td {
+    width: 800px;
+
+}
+
+
+/* Content two profile */
+
+.content-two-profile {
+    width: 850px;
+    background-color: white;
+    border-radius: 20px;
+    filter: drop-shadow(0 0 5px grey);
+    font-weight: bold;
+
+}
+
+.title-two-profile {
+    height: 50px;
+    background-color: #AED19C;
+    border-radius: 20px 20px 0 0;
+    display: flex;
+    padding: 10px 20px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+.detail-profile-container {
+    margin-top: 50px;
+    margin-left: 20px;
+    padding-bottom: 20px;
+}
+
+.detail-profile-container input {
+    width: 100%;
+    padding-left: 10px;
+    border-radius: 10px;
+    border: 1px grey solid;
+}
+
+::placeholder {
+    opacity: 50%;
+}
+
+
+.btn-save-profile {
+    display: flex;
+    margin-top: 50px;
+    padding-right: 20px;
+    justify-content: right;
+    
+}
+
+
+.btn-save-profile button{
+    border-radius: 5px;
+    border: 0px;
+    width: 150px;
+    height: 40px;
+    background-color: #3967C2;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    
+}
+
+.btn-save-profile button:hover {
+    background-color: black;
+    color: white;
+    transition: background-color 0.5s;
+
+}
+
+
+
+
+
+

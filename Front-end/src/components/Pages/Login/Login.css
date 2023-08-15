@@ -1,0 +1,87 @@
+.login-container{
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0;
+
+}
+
+.login-form {
+    width: 500px;
+    background-color: #DDD5F3;
+    text-align: center;
+    border-radius: 50px;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 20px 0;
+}
+
+.login-form p{
+    font-size: 15px;
+}
+.input-box input{
+    height: 3rem;
+    padding: 0 20px;
+    font-size: 18px;
+    border-radius: 50px;
+    border: 0px;
+}
+
+
+
+.input-box ::placeholder{
+    opacity: 50%;
+}
+
+.img-login img{
+    margin-top: 20px;
+    width: 70px;
+}
+
+.btn-login button{
+    width: 200px;
+    font-size: 1.5rem;
+    background-color: #AED19C ;
+    color: black;
+    border-radius: 10px;
+    border: 0px;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+.btn-login button:hover {
+    color: white;
+    background-color: black;
+    transition: background-color 0.5s;
+}
+
+
+/* เพิ่มสไตล์สำหรับข้อความแจ้งเตือนสำเร็จ */
+.success-alert {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+/* เพิ่มสไตล์สำหรับข้อความแจ้งเตือนไม่สำเร็จ */
+.error-alert {
+    background-color: #f44336;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

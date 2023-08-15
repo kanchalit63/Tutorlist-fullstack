@@ -1,0 +1,220 @@
+.header-content-three h1{
+    width: auto;
+    text-align: center;
+    font-size: 30px;
+   
+}
+
+
+
+.content-three-container{
+        padding: 30px 70px;
+        display: flex;
+        justify-content: space-around;
+        padding-bottom: 10%;
+        
+}
+
+/* Content ฝั่งซ้าย */
+
+.three-left-one{
+    width: 420px;
+    height: 420px;
+    border: 4px #AED19C solid;
+    margin-left: 100px;
+    position: relative;
+    border-radius: 20px ;
+    padding-left: 20px;
+}
+
+.three-left-one h2{
+    position: relative;
+    top: 18%;
+    color: blue;
+    font-size: 25px;
+}
+.three-left-one span{
+    position: relative;
+    top: 15%;
+}
+
+.three-left-one img{
+    position: relative;
+    top: 20%;
+    width: 100px;
+}
+
+.three-left-two{
+    top: 30px;
+    width: 420px;
+    height: 420px;
+    border: 4px #AED19C solid;
+    margin-left: 100px;
+    position: relative;
+    border-radius: 20px ;
+    padding-left: 20px;
+}
+
+.three-left-two h2{
+    position: relative;
+    top: 18%;
+    color: blue;
+    font-size: 25px;
+}
+.three-left-two span{
+    position: relative;
+    top: 15%;
+}
+
+.three-left-two img{
+    position: relative;
+    top: 20%;
+    width: 100px;
+}
+
+.student-one{
+    position: relative;
+    right: 120px;
+}
+.student-two{
+    position: relative;
+    left: 40px;
+}
+
+
+
+.three-left-three{
+    top: 60px;
+    width: 420px;
+    height: 420px;
+    border: 4px #AED19C solid;
+    margin-left: 100px;
+    position: relative;
+    border-radius: 20px ;
+    padding-left: 20px;
+}
+
+.three-left-three h2{
+    position: relative;
+    top: 18%;
+    color: blue;
+    font-size: 25px;
+}
+.three-left-three span{
+    position: relative;
+    top: 15%;
+}
+
+.three-left-three img{
+    position: relative;
+    top: 20%;
+    width: 100px;
+}
+
+/* Content ฝั่งขวา */
+
+.three-right-one{
+    width: 420px;
+    height: 420px;
+    margin-right: 150px;
+    border: 4px #AED19C solid;
+    position: relative;
+    border-radius: 20px ;
+    padding-left: 20px;
+    padding-right: 5px;
+}
+
+.three-right-one h2{
+    position: relative;
+    top: 18%;
+    color: blue;
+    font-size: 25px;
+}
+.three-right-one span{
+    position: relative;
+    top: 15%;
+}
+
+.three-right-one img{
+    position: relative;
+    top: 20%;
+    width: 100px;
+}
+
+
+.three-right-two{
+    top: 30px;
+    width: 420px;
+    height: 420px;
+    border: 4px #AED19C solid;
+    position: relative;
+    border-radius: 20px ;
+    padding-left: 20px;
+    padding-right: 5px;
+}
+
+.three-right-two h2{
+    position: relative;
+    top: 18%;
+    color: blue;
+    font-size: 25px;
+}
+.three-right-two span{
+    position: relative;
+    top: 15%;
+}
+
+.three-right-two img{
+    position: relative;
+    top: 20%;
+    width: 100px;
+}
+
+
+.three-right-three{
+    top: 60px;
+    width: 420px;
+    height: 420px;
+    border: 4px #AED19C solid;
+    padding-right: 5px;
+    position: relative;
+    border-radius: 20px ;
+    padding-left: 20px;
+}
+
+.three-right-three h2{
+    position: relative;
+    top: 18%;
+    color: blue;
+    font-size: 25px;
+}
+.three-right-three span{
+    position: relative;
+    top: 15%;
+}
+
+.three-right-three img{
+    position: relative;
+    top: 20%;
+    width: 100px;
+}
+
+
+
+@media screen and ( max-width: 1285px ){
+    .three-left-one{
+        position: relative;
+        right: 50px;
+    }
+    .three-left-two{
+        position: relative;
+        right: 50px;
+    }
+    .three-left-three{
+        position: relative;
+        right: 50px;
+    }
+    
+    
+}
+ 

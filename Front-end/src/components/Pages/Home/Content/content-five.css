@@ -1,0 +1,32 @@
+.bg-content-five{
+    background-image: url("../../../img/main/Gettyresized.jpg");
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: left;
+    flex-direction: column;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+
+
+.cotent-five-text{
+    color: white;
+    margin-left: 50px;
+}
+
+.cotent-five-text h3{
+    width: 800px;
+    font-size: 35px;
+}
+
+.cotent-five-text span{
+    position: relative;
+    bottom: 20px;
+    width: 800px;
+    font-size: 25px;
+}

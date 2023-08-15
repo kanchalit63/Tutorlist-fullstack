@@ -1,0 +1,209 @@
+.adminpage-container{
+    width: 1000px;
+    margin: auto;
+    padding: auto;
+    margin-top: 50px;
+}
+
+.btn-insertsubject {
+    background-color: #7286D3;
+    width: 150px;
+    height: 50px;
+    border-radius: 10px;
+    border: 0px;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.btn-insertsubject:hover {
+    background-color: #374259;
+    transition: background-color 0.5s;
+}
+
+
+.btn-checktutor{
+    background-color: #80B7A2;
+    color: black;
+    margin-left: 10px;
+    border-radius: 10px;
+    width: auto;
+    height: 50px;
+    border-radius: 10px;
+    border: 0px;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.btn-checktutor:hover{
+    background-color: #346751;
+    transition: background-color 0.5s;
+}
+
+
+.btn-info-subject{
+    margin-top: 10px;
+}
+
+
+
+
+.edit-insert-container{
+    display: grid;
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+
+
+.info-subject button{
+    margin-left: 5px;
+    margin-bottom: 5px;
+}
+
+.btn-edit-subejct{
+    background-color: #A0C3D2;
+    color: black;
+    border-radius: 10px;
+    border-radius: 10px;
+    width: 100px;
+    height: 50px;
+    border-radius: 10px;
+    border: 0px;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.btn-edit-subejct:hover{
+    background-color: #03C4A1;
+}
+
+
+.btn-delete-subejct{
+    background-color: #FF6969;
+    color: black;
+    border-radius: 10px;
+    width: 60px;
+    height: 50px;
+    border-radius: 10px;
+    border: 0px;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.btn-delete-subejct:hover{
+    background-color: #E94560;
+}
+
+
+
+
+
+
+.form-addsubject button{
+    margin-left: 10px;
+    border-radius: 10px;
+    font-size: 15px;
+}
+
+.form-addsubject input{
+    border-radius: 0.5rem;
+    border: 1px solid grey;
+    padding: 0 10px;
+    font-size: 15px;
+}
+
+.header-btn{
+    display: flex;
+}
+
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.popup-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    
+}
+
+.popup-content input{
+    margin-bottom: 15px;
+    padding-left: 10px;
+    border-radius: 10px;
+    border: 1px solid grey;
+    height: 50px;
+    font-size: 17px;
+}
+
+.btn-confirm{
+    background-color: #03C4A1;
+    color: black;
+    border-radius: 10px;
+    width: auto;
+    height: 50px;
+    border-radius: 10px;
+    border: 0px;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+}
+.btn-confirm:hover{
+    background-color: #68A7AD;
+    color: white;
+}
+
+.btn-close{
+    background-color: red;
+    color: black;
+    border-radius: 10px;
+    width: 60px;
+    height: 50px;
+    border-radius: 10px;
+    border: 0px;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+}
+.btn-close:hover{
+    background-color: #BB6464;
+    color: white;
+}
+
+.info-subject{
+    display: flex;
+}
+
+.btn-showsubject{
+    background-color: #65647C;
+    color: black;
+    border-radius: 10px;
+    width: auto;
+    height: 50px;
+    border-radius: 10px;
+    border: 0px;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.btn-showsubject:hover{
+    background-color: #DEBACE;
+}
+
+

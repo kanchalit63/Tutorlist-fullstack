@@ -1,0 +1,73 @@
+.search-container {
+    background-image: url(https://healthpolicy.usc.edu/wp-content/uploads/2023/03/tutor-covid-1024x683.jpg);
+    width: 100%;
+    height: 85vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.searching-bar input {
+    width: 800px;
+    height: 4rem;
+    border-radius: 20px;
+    border: none;
+    padding: 0 20px;
+    font-size: 20px;
+    margin-bottom: 3rem;
+
+}
+
+.searching-bar button {
+    margin-left: 20px;
+    width: 150px;
+    height: 4rem;
+    border-radius: 20px;
+    background-color: #AED19C;
+    color: black;
+    font-size: 20px;
+}
+
+.searching-bar button:hover {
+    color: white;
+    background-color: black;
+}
+
+.recommend-subject {
+    display: flex;
+    justify-content: space-between;
+    width: 65%;
+    height: 200px;
+
+
+}   
+
+
+
+
+/* Subject Recommend  */
+
+.subject-recommend {
+    background-color: #AED19C;
+    width: 170px;
+    height: 200px;
+    border-radius: 35px;
+    text-align: center;
+
+}
+
+.subject-recommend img {
+    width: 100px;
+    margin-top: 30px;
+
+}
+
+.subject-recommend p {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 10px;
+}

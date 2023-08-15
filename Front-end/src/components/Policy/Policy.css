@@ -1,0 +1,21 @@
+.policy-container{
+    margin-left: 250px;
+    width: 1200px;
+    font-size: 20px;
+    margin-bottom: 100px;
+}
+
+.policy-container h1{
+    
+    font-size: 70px;
+}
+
+.policy-container li{
+    font-size: 15px;
+    
+}
+
+.policy-container span,p{
+    font-size: 15px;
+}
+

@@ -1,0 +1,148 @@
+.security-container {
+    width: auto;
+    padding-top: 1px;
+    padding-bottom: 6.5rem;
+    
+}
+
+/* Title text */
+.title-security {
+    display: flex;
+    margin: 4rem 50px;
+    border-bottom: 2px grey solid;
+    
+}
+
+.title-security span {
+    padding-left: 30px;
+    font-weight: bold;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.title-security a {
+    text-decoration: none;
+}
+
+.active-page-security a {
+    color: black;
+}
+
+.active-page-security a:hover {
+    color: whitesmoke;
+}
+
+/* Ending title */
+
+.security-content-container{
+    display: flex;
+    justify-content: space-evenly;
+    margin-left: 100px;
+}
+
+/* content-one-security */
+
+
+.title-one-security{
+    height: 50px;
+    background-color: #AED19C;
+    border-radius: 20px 20px 0 0;
+    display: flex;
+    padding: 10px 20px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.content-one-security{
+    width: 600px;
+    background-color: white;
+    border-radius: 20px;
+    padding-bottom: 20px;
+    filter: drop-shadow(0 0 5px grey);
+    font-weight: bold;
+    
+}
+
+.detail-security-container{
+    margin: 10px 20px;
+}
+
+.detail-security-container input{
+    width: 100%;
+    padding-left: 10px;
+    border-radius: 10px;
+    border: 1px gray solid;
+}
+
+/* content-two-security */
+.title-two-security{
+    height: 50px;
+    background-color: #AED19C;
+    border-radius: 20px 20px 0 0;
+    display: flex;
+    padding: 10px 20px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.content-two-security{
+    width: 400px;
+    margin-right: 200px;
+    
+}
+
+.content-two-security{
+    width: 400px;
+    background-color: white;
+    border-radius: 20px;
+    padding-bottom: 20px;
+    filter: drop-shadow(0 0 5px grey);
+    font-weight: bold;
+    
+    
+}
+
+.detail-secuirty-content-two{
+    margin-top: 20px; 
+    padding: 0 50px;
+}
+
+/* Button */
+
+.btn-save-changepassword button{
+    margin-top: 20px;
+    border-radius: 5px;
+    border: 0px;
+    width: 150px;
+    height: 40px;
+    background-color: #3967C2;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.btn-save-changepassword button:hover {
+    background-color: black;
+    color: white;
+    transition: background-color 0.5s;
+
+}
+
+.btn-delete-accout button{
+    margin-top: 20px;
+    margin-left: 30px;  
+    border-radius: 5px;
+    border: 0;
+    height: 40px;
+    background-color: #FF9B9B;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.btn-delete-accout button:hover{
+
+    background-color: red;
+    color: white;
+    transition: background-color 0.5s;
+}

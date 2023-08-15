@@ -1,0 +1,78 @@
+.registutor-conatiner {
+    width: 900px;
+    background-color: #DBDFEA;
+    margin: auto;
+    padding: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border-radius: 30px;
+}
+
+.registutor-conatiner h1 {
+    text-align: center;
+    padding-top: 10px;
+}
+
+.form-register-tutor {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 30px;
+    font-weight: bold;
+}
+
+.form-register-tutor textarea {
+    width: 100%;
+    padding: 10px 10px;
+    border-radius: 10px;
+    border: 0px;
+}
+
+.form-register-tutor input {
+    width: 100%;
+    height: 40px;
+    padding: 10px;
+    border-radius: 10px;
+    border: 0px;
+}
+
+.tutor-inputfile input[type=file] {
+    font-weight: bold;
+    border: thin solid grey;
+    border-radius: 10px;
+}
+
+.btn-confirm-registertutor{
+    display: flex;
+    justify-content: end;
+}
+
+.btn-confirm-registertutor button {
+    margin-top: 20px;
+    height: 50px;
+    width: 150px;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 15px;
+    border: 0px;
+    background-color: #C8E4B2;
+}
+
+.btn-confirm-registertutor button:hover {
+    background-color: #A86464;
+    transition: background-color 0.5s;
+    color: white;
+}
+
+
+.policy-text{
+    display: flex;
+}
+
+.policy-text input{
+    width: 15px;
+}
+
+.policy-text label{
+    margin-top: 12px;
+    margin-left: 10px;
+}
