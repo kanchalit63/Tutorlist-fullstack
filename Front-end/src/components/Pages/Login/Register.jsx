@@ -18,7 +18,7 @@ function Register() {
 
 
   const addUsers = () => {
-    Axios.post('http://localhost:5050/createuser', {
+    Axios.post('http://localhost:5050/register_users', {
       User_email: email,
       User_name: name,
       User_surename: surename,
@@ -26,29 +26,32 @@ function Register() {
       User_password: password,
       User_type: "user"
     })
-    .then((response) => {
-      if (response.status === 200) {
-        // แสดงข้อความแจ้งเตือนเมื่อสำเร็จ
-        alert("ลงทะเบียนสำเร็จ");
-        setUserlist([
-          ...userlist,
-          {
-            User_email: email,
-            User_name: name,
-            User_surename: surename,
-            User_phone: phone,
-            User_password: password,
-            User_type: "user"
-          }
-        ]);
-      } else {
-        console.log("Error registering user");
-      }
-    })
-    .catch((error) => {
-      console.log("Error:", error);
-    });
+      .then((response) => {
+        if (response.status === 200) {
+          // แสดงข้อความแจ้งเตือนเมื่อสำเร็จ
+          alert("สมัครสมาชิกเสร็จสิ้น");
+          
+          // ตัวอย่างการอัพเดตรายการผู้ใช้หลังจากสมัครสมาชิกเสร็จสิ้น
+          setUserlist([
+            ...userlist,
+            {
+              User_email: email,
+              User_name: name,
+              User_surename: surename,
+              User_phone: phone,
+              User_password: password,
+              User_type: "user"
+            }
+          ]);
+        } else {
+          console.log("Error registering user");
+        }
+      })
+      .catch((error) => {
+        console.log("Error:", error);
+      });
   };
+  
   
 
 

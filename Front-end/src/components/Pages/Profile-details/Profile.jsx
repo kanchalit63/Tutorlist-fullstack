@@ -1,7 +1,16 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './Profile.css'
+import axios from 'axios'
 
 function Profile() {
+
+
+    const [newuser_email,setNewuser_email] = useState ()
+    const [newuser_name,setNewuser_name] = useState ()
+    const [newuser_surename,setNewuser_surename] = useState ()
+    const [newuser_phone,setNewuser_phone] = useState ()
+
+
     return (
         <>
             <div className="profile-container">
@@ -14,49 +23,39 @@ function Profile() {
                 </div>
                 <div className="content-profile-container">
                     <section>
-                        <div className="content-one-profile">
-                            <div className="title-one-profile">Profile Picture</div>
-                            <div className="img-content-profile">
-                                <img src="/src/components/img/profile/profile2.png" alt="" />
-                            </div>
-                            <p>JPG OR PNG no larger than 5 MB</p>
-                            <div className="btn-img-profile">
-                                <input type="file" id='upload' hidden />
-                                <label for="upload">Upload new image</label>
-                            </div>
-                        </div>
-                    </section>
-                    <section>
                         <div className="content-two-profile">
                             <div className="title-two-profile">Accout Details</div>
                             <form action="">
                                 <div className="detail-profile-container">
-                                    <table >
-                                        <tr>
-                                            <td colSpan="2">
-                                                <label htmlFor="">Email Address</label><br />
-                                                <input type="text" placeholder='name@example.com' />
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <label htmlFor="">First name</label><br />
-                                                <input type="text" placeholder='Firstname' />
-                                            </td>
-                                            <td>
-                                                <label htmlFor="">Last name</label><br />
-                                                <input type="text" placeholder='Lastname' />
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <label htmlFor="">Phone number</label><br />
-                                                <input type="text" placeholder='000-000-0000' />
-                                            </td>
-                                        </tr>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td colSpan="2">
+                                                    <label htmlFor="">Email Address</label><br />
+                                                    <input type="text" placeholder='name@example.com' onChange={(event) => { setNewUser_email(event.target.value) }} />
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <label htmlFor="">First name</label><br />
+                                                    <input type="text" placeholder='Firstname' onChange={(event) => { setNewUser_name(event.target.value) }} />
+                                                </td>
+                                                <td>
+                                                    <label htmlFor="">Last name</label><br />
+                                                    <input type="text" placeholder='Lastname' onChange={(event) => { setNewUser_surename(event.target.value) }} />
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <label htmlFor="">Phone number</label><br />
+                                                    <input type="text" placeholder='000-000-0000' onChange={(event) => { setNewUser_phone(event.target.value) }} />
+                                                </td>
+                                            </tr>
+                                        </tbody>
                                     </table>
+
                                     <div className="btn-save-profile">
-                                        <button>Save Change</button>
+                                    <button >Save Change</button>
                                     </div>
                                 </div>
                             </form>

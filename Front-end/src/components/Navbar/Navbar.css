@@ -1,5 +1,6 @@
 .Navbar-container{
     display: flex;
+    height: 100px;
     justify-content: space-between;
     align-items: center;
     background-color: #AED19C;
@@ -30,7 +31,7 @@
   }
   
   .nav-links a:hover {
-    color: #FFF6DC;
+    color: #82A0D8;
   }
   
   .nav-links button {
@@ -50,4 +51,43 @@
     color: black;
   }
   
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content-left {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    width: 200px; /* ปรับความกว้าง */
+    box-shadow: -8px 8px 16px 0px rgba(0,0,0,0.2); /* เปลี่ยนตำแหน่งเงา */
+    z-index: 1;
+    right: 0%; /* จัดทางซ้าย */
+    top: 100%; /* จัดลงข้างล่าง */
+    font-size: 15px;
+  }
+  
+  .dropdown-content-left a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-content-left a:hover {
+    background-color: #ddd;
+  }
+  
+  .dropdown:hover .dropdown-content-left {
+    display: block;
+  }
+  
+  
 
+  .dropdown img{
+    width: 50px;
+    border-radius: 50%;
+  }
+
+  

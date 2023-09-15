@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import './admin.css'
 import Axios from 'axios';
+import { Link } from 'react-router-dom';
 
 
 
@@ -131,6 +132,7 @@ function admin() {
                     <div className="popup-overlay" onClick={closePopupaddsubject}></div>
                 )}
                 <button className='btn-checktutor'>ตรวจสอบติวเตอร์</button>
+               <Link to="/ShowContact"><button  className='btn-checkcontact'>ตรวจสอบข้อมูลการติดต่อ</button></Link> 
                 <br />
             </div>
             <hr />

@@ -1,0 +1,38 @@
+.showcontact-container{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+
+.content-showcontact table{
+    font-size: 18px;
+}
+
+.content-showcontact th{
+    border: 1px solid black;
+}
+
+.content-showcontact tbody{
+    font-size: 15px;
+}
+
+.content-showcontact table{
+    text-align: center;
+}
+
+.btn-contact-backdashboard{
+    background-color: #829460;
+    margin-bottom: 10px;
+    height: 50px;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 15px;
+    border: 0px;
+    color: white;
+}
+
+.btn-contact-backdashboard:hover{
+    background-color: #6D8B74;
+    transition: background-color 0.3s;
+}
