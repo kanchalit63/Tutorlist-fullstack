@@ -20,17 +20,31 @@ function ShowContact() {
             });
     };
 
+
+    const Deletecontact = (Contact_id) => {
+        Axios.delete(`http://localhost:5050/Contact_id/${Contact_id}`).then((response) => {
+            setContacts(
+                contacts.filter((val) => {
+                    return val.Contact_id !== Contact_id;
+                })
+            );
+        });
+    }
+
+
     return (
         <div className='showcontact-container'>
-            <div className="content-showcontact">
+            <div >
                 <h1>ข้อมูลติดต่อเรา</h1>
+                
                 <Link to="/admin"><button className='btn-contact-backdashboard'>กลับหน้า DashBoard</button></Link>
-                <table>
+                <table className='pending-tutor'>
                     <thead>
                         <tr>
                             <th>ชื่อ-นามสกุล</th>
                             <th>เบอร์ติดต่อ</th>
                             <th>ข้อความที่ต้องการติดต่อ</th>
+                            <th>ทำรายการ</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -39,6 +53,7 @@ function ShowContact() {
                                 <td>{contact.Contact_name}</td>
                                 <td>{contact.Contact_phone}</td>
                                 <td>{contact.Contact_message}</td>
+                                <td className='btn-action-contact'><button className='Reject' onClick={() => Deletecontact(contact.Contact_id)}>ลบ</button></td>
                             </tr>
                         ))}
                     </tbody>

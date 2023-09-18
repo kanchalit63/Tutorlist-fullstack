@@ -1,10 +1,6 @@
-.showcontact-container{
-    display: flex;
-    justify-content: center;
-    margin-top: 50px;
+.showcontact-container td{
+    text-align: center;
 }
-
-
 .content-showcontact table{
     font-size: 18px;
 }
@@ -15,6 +11,7 @@
 
 .content-showcontact tbody{
     font-size: 15px;
+    
 }
 
 .content-showcontact table{
@@ -35,4 +32,15 @@
 .btn-contact-backdashboard:hover{
     background-color: #6D8B74;
     transition: background-color 0.3s;
+}
+
+
+.btn-action-contact{
+    text-align: center;
+}
+.btn-action-contact button{
+    width: 100px;
+    height: 50px;
+    border-radius: 10px ;
+    border: 0px;
 }

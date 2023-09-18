@@ -1,0 +1,79 @@
+
+
+.continaer-confirmtutor h1{
+    text-align: center;
+}
+
+.btn-action-tutor{
+    text-align: center;
+}
+
+.btn-action-tutor button {
+   
+    width: 100px;
+    height: 50px;
+    border-radius: 10px ;
+    border: 0px;
+
+}
+
+.Approve {
+    
+    background-color: #76BA99;
+    color: white;
+}
+
+.Approve:hover {
+    background-color: #064635;
+}
+
+.Reject{
+    background-color: #F37878;
+    color: white;
+}
+
+.Reject:hover{
+    background-color: #AA2B1D;
+}
+
+.truncate-text {
+    white-space: nowrap;
+    /* ไม่ขึ้นบรรทัดใหม่ */
+    overflow: hidden;
+    /* ซ่อนเนื้อหาที่เกิน */
+    text-overflow: ellipsis;
+    /* แสดง "..." เมื่อเนื้อหาเกิน */
+    max-width: 15ch;
+    /* จำกัดความกว้างสูงสุดเป็น 15 ตัวอักษร */
+}
+
+
+
+.pending-tutor {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.pending-tutor td,
+.pending-tutor th {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+.pending-tutor tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.pending-tutor tr:hover {
+    background-color: #ddd;
+}
+
+.pending-tutor th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    background-color: #04AA6D;
+    color: white;
+}
+
+

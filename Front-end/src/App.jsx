@@ -14,12 +14,16 @@ import Security from './components/Pages/Profile-details/Security'
 import Admin from './components/Pages/admin/admin'
 import Policy from './components/Policy/Policy'
 import ShowContact from './components/Pages/Contact/ShowContact'
+import Confirmtutor from './components/Pages/admin/confirmtutor'
+import Showtutor from './components/Pages/admin/Showtutor'
 
 function App() {
   const isAdminPage = window.location.pathname.includes('/admin'); // ตรวจสอบว่าเป็นหน้า Admin หรือไม่
   const isContactPage = window.location.pathname.includes('/ShowContact');// ตรวจสอบว่าเป็นหน้า Contact หรือไม่
+  const isConfirmtutorPage = window.location.pathname.includes('/Confirmtutor');
+  const isShowtutorPage = window.location.pathname.includes('/Showtutor');
 
-  const shouldShowNavbar = !isAdminPage && !isContactPage; // ตรวจสอบว่าควรแสดง Navbar หรือไม่
+  const shouldShowNavbar = !isAdminPage && !isContactPage && !isConfirmtutorPage && !isShowtutorPage; // ตรวจสอบว่าควรแสดง Navbar หรือไม่
 
   // เพิ่มการตรวจสอบคุกกี้ token และการนำทาง
   const token = getCookie('token');
@@ -41,6 +45,8 @@ function App() {
           <Route path="/Admin" element={<Admin />} />
           <Route path="/Policy" element={<Policy />} />
           <Route path="/ShowContact" element={<ShowContact />} />
+          <Route path="/Confirmtutor" element={<Confirmtutor />} />
+          <Route path="/Showtutor" element={<Showtutor />} />
         </Routes>
       </div>
     </>

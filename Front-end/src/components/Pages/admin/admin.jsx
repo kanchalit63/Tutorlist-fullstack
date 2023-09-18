@@ -1,7 +1,8 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import './admin.css'
 import Axios from 'axios';
 import { Link } from 'react-router-dom';
+import axios from 'axios';
 
 
 
@@ -9,6 +10,9 @@ function admin() {
 
     const [subjectlist, setSubjectlist] = useState([]); //ตัวแปรรับข้อมูลทั้งหมด
     const [subject_name, setSubject_name] = useState(''); // ตัวแปร Insert ข้อมูล
+    const [tutorlist,setTutorlist] = useState([])
+
+
 
     const [isSubjectVisible, setIsSubjectVisible] = useState(false);
 
@@ -40,6 +44,16 @@ function admin() {
     }
 
     //---------------------------------------------------------------------------------------------------------------//
+
+    useEffect(() =>{
+        Axios.get('http://localhost:5050/showtutor')
+        .then((response) => {
+            setTutorlist(response.data)
+        })
+        .catch((error) => {
+            console.log('Error Axios data : ' , error)
+        })
+    })
 
 
 
@@ -131,8 +145,9 @@ function admin() {
                 {isPopupsubjectVisible && (
                     <div className="popup-overlay" onClick={closePopupaddsubject}></div>
                 )}
-                <button className='btn-checktutor'>ตรวจสอบติวเตอร์</button>
-               <Link to="/ShowContact"><button  className='btn-checkcontact'>ตรวจสอบข้อมูลการติดต่อ</button></Link> 
+                <Link to="/Confirmtutor"> <button className='btn-checktutor'>ตรวจสอบติวเตอร์</button></Link>
+                <Link to="/ShowContact"><button className='btn-checkcontact'>ตรวจสอบข้อมูลการติดต่อ</button></Link>
+                <Link to="/Showtutor"><button className='btn-checktutor'>รายชื่อติวเตอร์</button></Link>
                 <br />
             </div>
             <hr />
@@ -176,10 +191,7 @@ function admin() {
                 <hr />
             </div>
 
-            <div className="info-tutor">
-                <button className='btn-showsubject'>ซ่อน/แสดงข้อมูลติวเตอร์</button>
-                <hr />
-            </div>
+          
 
 
         </div>

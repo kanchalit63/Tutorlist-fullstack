@@ -17,7 +17,7 @@ app.use(express.json())
 app.use(cors(
     {
         origin: ["http://localhost:5173"],
-        methods: ["POST", "GET"],
+        methods: ["POST", "GET", "DELETE", "PUT"],
         credentials: true
     }
 ))
@@ -52,7 +52,6 @@ app.post('/register_users', (req, res) => {
                         console.log(err);
                         res.status(500).send('มีข้อผิดพลาดในการลงทะเบียน');
                     } else {
-                        console.log('User inserted:', result);
                         res.status(200).send('ลงทะเบียนสำเร็จ');
                     }
                 }
@@ -151,6 +150,26 @@ app.get('/showinfocontact', (req, res) => {
     });
 });
 
+// close show contact
+
+// Delete Contact
+
+app.delete('/Contact_id/:Contact_id', (req, res) => {
+    const Contact_id = req.params.Contact_id; // เปลี่ยนจาก req.body.Subject_id เป็น req.params.Subject_id
+    db.query("DELETE FROM Contact WHERE Contact_id = ?", [Contact_id], (err, result) => {
+        if (err) {
+            console.log(err);
+        } else {
+            console.log(result);
+            res.send(result);
+        }
+    });
+});
+
+//close Delete Contact
+
+
+
 
 // Login
 
@@ -191,11 +210,11 @@ app.post('/login', (req, res) => {
 app.get('/Logout', (req, res) => {
     // เคลียร์คุกกี้ 'token' ที่เกี่ยวข้องกับการยืนยันตัวตน
     res.clearCookie('token');
-  
+
     // ตอบกลับว่า Logout สำเร็จ
     return res.json({ status: 'Success', message: 'Logout สำเร็จ' });
-  });
-  
+});
+
 
 
 
@@ -214,6 +233,107 @@ app.post('/authen', function (req, res, next) {
 
 //close login
 
+
+//Register Tutor
+
+
+app.post('/Register_tutor', (req, res) => {
+    db.query("INSERT INTO tutor (Tutor_username, Tutor_password, Tutor_name, Tutor_surename, Tutor_tel, Tutor_email, Tutor_address, Tutor_about, Tutor_img) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)",
+        [req.body.Tutor_username, req.body.Tutor_password, req.body.Tutor_name, req.body.Tutor_surename, req.body.Tutor_tel, req.body.Tutor_email, req.body.Tutor_address, req.body.Tutor_about, req.body.Tutor_img],
+        (err, result) => {
+            if (err) {
+                console.log(err)
+                res.status(500).send('มีข้อผิดพลาดในการลงทะเบียน')
+            } else {
+                res.status(200).send('ลงทะเบียนสำเร็จ');
+            }
+        }
+    )
+});
+
+// close Register tutor
+
+// Approve Tutor and Showlist 
+
+app.get('/tutor/pending', (req, res) => {
+    db.query(`SELECT * FROM tutor WHERE Tutor_status = 'Pending' `, (err, result) => {
+        if (err) {
+            console.log(err)
+            res.status(500).send("An error occurred while fetching data.");
+        } else {
+            res.send(result)
+        }
+    })
+})
+
+app.put('/approve/tutor', (req, res) => {
+    const Tutor_id = req.body.Tutor_id;
+    const Tutor_status = req.body.Tutor_status; // แก้ตรงนี้
+
+
+    db.query("UPDATE tutor SET Tutor_status = ? WHERE Tutor_id = ?", [Tutor_status, Tutor_id], (err, result) => {
+        if (err) {
+            console.error(err);
+            res.status(500).json({ error: 'มีข้อผิดพลาดในการอนุมัติติวเตอร์' }); // ส่งสถานะข้อผิดพลาดกลับไปยังแอพพลิเคชัน
+        } else {
+            console.log("สำเร็จ");
+            console.log(result);
+            res.status(200).json({ success: true, message: 'อนุมัติติวเตอร์สำเร็จ' }); // ส่งสถานะการทำงานสำเร็จกลับไปยังแอพพลิเคชัน
+        }
+    });
+});
+
+app.put('/reject/tutor', (req, res) => {
+    const Tutor_id = req.body.Tutor_id;
+    const Tutor_status = req.body.Tutor_status; // แก้ตรงนี้
+
+
+    db.query("UPDATE tutor SET Tutor_status = ? WHERE Tutor_id = ?", [Tutor_status, Tutor_id], (err, result) => {
+        if (err) {
+            console.error(err);
+            res.status(500).json({ error: 'มีข้อผิดพลาดในการอนุมัติติวเตอร์' }); // ส่งสถานะข้อผิดพลาดกลับไปยังแอพพลิเคชัน
+        } else {
+            console.log("สำเร็จ");
+            console.log(result);
+            res.status(200).json({ success: true, message: 'ปฏิเสธข้อมูลติวเตอร์สำเร็จ' }); // ส่งสถานะการทำงานสำเร็จกลับไปยังแอพพลิเคชัน
+        }
+    });
+});
+
+// close Approve
+
+
+// Show & Delete Tutor 
+app.get('/tutor/approve', (req, res) => {
+    db.query(`SELECT * FROM tutor WHERE Tutor_status = 'Approve' `, (err, result) => {
+        if (err) {
+            console.log(err)
+            res.status(500).send("An error occurred while fetching data.");
+        } else {
+            res.send(result)
+        }
+    })
+})
+
+
+app.delete('/tutor/:Tutor_id', (req, res) => {
+    const Tutor_id = req.params.Tutor_id;
+    const query = "DELETE FROM tutor WHERE Tutor_id = ?";
+
+    db.query(query, [Tutor_id], (err, result) => {
+        if (err) {
+            console.error('Error deleting tutor: ' + err.message);
+            res.status(500).json({ error: 'Error deleting tutor' });
+        } else {
+            console.log('Tutor deleted:', result.affectedRows);
+            res.status(200).json({ message: 'Tutor deleted successfully' });
+        }
+    });
+});
+
+
+
+// close Show & Delete Tutor
 
 
 app.listen('5050', () => {
